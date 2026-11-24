@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Course Registration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Course Registration System</h1>
+        <p>Manage students, courses, and registrations</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="studentCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Courses</h3>
+                <p id="courseCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Registrations</h3>
+                <p id="registrationCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Student -->
+
+        <section class="container">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="number"
+                    id="studentId"
+                    placeholder="Student ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <button type="submit">Add Student</button>
+
+            </form>
+
+            <h3>Students List</h3>
+
+            <div id="studentsList"></div>
+
+        </section>
+
+
+        <!-- Add Course -->
+
+        <section class="container">
+
+            <h2>Add Course</h2>
+
+            <form id="courseForm">
+
+                <input
+                    type="number"
+                    id="courseId"
+                    placeholder="Course ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="courseName"
+                    placeholder="Course Name"
+                    required
+                >
+
+                <button type="submit">Add Course</button>
+
+            </form>
+
+            <h3>Available Courses</h3>
+
+            <div id="coursesList"></div>
+
+        </section>
+
+
+        <!-- Register Student -->
+
+        <section class="container">
+
+            <h2>Register Student in Course</h2>
+
+            <form id="registrationForm">
+
+                <label for="studentSelect">Select Student</label>
+
+                <select id="studentSelect" required>
+                    <option value="">Choose Student</option>
+                </select>
+
+
+                <label for="courseSelect">Select Course</label>
+
+                <select id="courseSelect" required>
+                    <option value="">Choose Course</option>
+                </select>
+
+                <button type="submit">Register Student</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Student Registered Courses -->
+
+        <section class="container">
+
+            <h2>Student Registered Courses</h2>
+
+            <select id="registeredStudentSelect">
+
+                <option value="">Select Student</option>
+
+            </select>
+
+            <div id="registeredCourses"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Student Course Registration System © 2026</p>
+    </footer>
+
+
+    <!-- JavaScript files -->
+
+    <script src="js/Student.js"></script>
+    <script src="js/Course.js"></script>
+    <script src="js/Registration.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
